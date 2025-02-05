@@ -54,17 +54,20 @@ const formStyle = {
   maxWidth: '400px',
   margin: '0 auto',
   padding: '20px',
-  border: '1px solid #ccc',
+  border: '1px solid #444',
   borderRadius: '8px',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  backgroundColor: '#f9f9f9',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  backgroundColor: '#1e1e1e',
+  color: '#fff',
 };
 
 const inputStyle = {
   padding: '10px',
   borderRadius: '4px',
-  border: '1px solid #ddd',
+  border: '1px solid #555',
   fontSize: '16px',
+  backgroundColor: '#2e2e2e',
+  color: '#fff',
 };
 
 const textareaStyle = {
