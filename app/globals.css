@@ -1,21 +1,25 @@
+/* Import Tailwind CSS base styles, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define default light theme color variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff;  /* White background */
+  --foreground: #171717; /* Dark gray text */
 }
 
+/* Override color variables for dark mode when system preference is set to dark */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Near black background */
+    --foreground: #ededed; /* Light gray text */
   }
 }
 
+/* Apply global styles to the body element */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);      /* Use theme-aware text color */
+  background: var(--background); /* Use theme-aware background color */
+  font-family: Arial, Helvetica, sans-serif; /* Set default system fonts */
 }
