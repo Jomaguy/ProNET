@@ -7,12 +7,16 @@
 import { createClient } from '@supabase/supabase-js'
 
 /* Supabase project URL - unique to your project */
-const supabaseUrl = 'https://uyfznzybyxzkvbounwop.supabase.co'
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 
 /* Supabase anon/public key - stored in environment variables for security
  * This key should be restricted to only the permissions needed for client-side operations
  */
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseKey) {
+  throw new Error('Missing Supabase environment variables')
+}
 
 /* Create and export the Supabase client instance
  * This instance will be used for all database operations and authentication
